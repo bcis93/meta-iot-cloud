@@ -1,10 +1,13 @@
 inherit cmake
 
-DEPENDS = "azure-c-shared-utility"
+DEPENDS = "\
+    azure-c-shared-utility \
+    azure-macro-utils-c \
+    umock-c \
+"
 
 SRC_URI += "\
     file://Fix-packaging-issues.patch \
-    file://Use-cmake-configs-in-sysroot.patch \
 "
 
 S = "${WORKDIR}/git"
